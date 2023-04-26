@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 import static io.restassured.RestAssured.baseURI;
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 public class ZippoTest {
@@ -129,7 +129,7 @@ public class ZippoTest {
                 //.log().body()
                 .statusCode(200)
                 .body("places.'place name'", hasItem("Dörtağaç Köyü"))
-        // bütün place name lerde dört ağaç köyü var mı
+                // bütün place name lerde dört ağaç köyü var mı
 
         ;
     }
