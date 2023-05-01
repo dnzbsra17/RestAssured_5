@@ -51,4 +51,16 @@
 
 
     </dependencies>
+
+
+ <!--   Maven test çalıştırılınca çalıştırılacak bölümün setlenmesi kısmı -->
+
+
+
+
+
+
+
+
+
 </project>
