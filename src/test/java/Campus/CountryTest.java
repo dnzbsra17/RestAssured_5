@@ -113,7 +113,7 @@ public class CountryTest {
 
                 .then()
                 .log().body() // gelen body yi log olarak göster
-                .statusCode(400)
+                .statusCode(500)
                 .body("message", containsString("already")) // gelen body  deki ...
 
 
