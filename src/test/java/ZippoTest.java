@@ -126,7 +126,7 @@ public class ZippoTest {
 
 
                 .then()
-                //.log().body()
+                .log().body()
                 .statusCode(200)
                 .body("places.'place name'", hasItem("Dörtağaç Köyü"))
                 // bütün place name lerde dört ağaç köyü var mı
@@ -162,7 +162,7 @@ public class ZippoTest {
 
 
                 .then()
-                //.log().body()
+                .log().body()
                 .statusCode(200)
                 .body("places", hasSize(1)) // size ı 1 mi
                 .body("places.state", hasItem("California")) // verilen paht deki list bu item e sahip mi
@@ -262,7 +262,7 @@ public class ZippoTest {
 
 
     @Test
-    public void test1() {
+    public void requestResponseSpecification() {
 
         //https://gorest.co.in/public/v1/users?page=2
         given()
@@ -408,7 +408,8 @@ public class ZippoTest {
 
     }
     @Test
-    public void extractJsonAll(){
+    public void extractJsonAll_POJO(){
+        //POJO: JSON nesnesi:locationNesne
 
         Location locationNesne=
         given()
